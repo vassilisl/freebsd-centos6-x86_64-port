@@ -123,13 +123,13 @@ EXTRACT_ONLY=		${BIN_DISTFILES}
 .include <bsd.port.pre.mk>
 
 .if !defined(PACKAGE_BUILDING) || (defined(PACKAGE_BUILDING) && !defined(LINUX_OSRELEASE) )
-LINUX_OSRELEASE!=	${ECHO_CMD} `${SYSCTL} -n compat.linux.osrelease 2>/dev/null`
+LINUX_OSRELEASE!=	${ECHO_CMD} `${SYSCTL} -n compat.linux64.osrelease 2>/dev/null`
 .endif
 
 .if ${LINUX_OSRELEASE}x == "x"
 IGNORE=			linuxulator is not (kld)loaded
 .elif ${LINUX_OSRELEASE} == "2.6.16"
-IGNORE=			compat.linux.osrelease: ${LINUX_OSRELEASE} is not supported, please use 2.6.36, BEWARE this is highly experimental
+IGNORE=			compat.linux64.osrelease: ${LINUX_OSRELEASE} is not supported, please use 2.6.36, BEWARE this is highly experimental
 .endif
 
 REMOVE_DIRS=		boot dev etc/fonts home initrd media root tmp var/log var/run var/tmp \
