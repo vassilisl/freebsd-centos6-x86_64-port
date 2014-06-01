@@ -1,6 +1,9 @@
-# Created by: Vassilis Laganakos <vassilis@einval dot com>, based on the file made by
-# 			  Svyatoslav Lempert <svyatoslav.lempert@gmail dot com> for the 32bit version
-# $FreeBSD:$
+# Created by: Vassilis Laganakos <vassilis@einval dot com>
+# $FreeBSD$
+#
+# 			  Based on the Makefile by
+# 			  Svyatoslav Lempert <svyatoslav.lempert@gmail dot com>
+# 			  for the 32bit version
 
 PORTNAME=		c6-x86_64
 PORTVERSION=		6.4
